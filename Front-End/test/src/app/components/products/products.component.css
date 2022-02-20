@@ -1,0 +1,59 @@
+.image img {
+    border: none;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.image img:hover {
+    transform: scale(1.08);
+    transition: all 0.4s ease-in-out
+}
+.text-white h1 {
+    font-family:cursive;
+    font-size: 40px;
+    font-style: italic;
+    
+}
+.text-white h4 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-style: italic;}
+
+    .btn-warning{
+        background-color: rgb(141, 105, 131);
+        width: 40%;
+    border-color: rgb(141, 105, 131);
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+.card-body h5{
+    font-family: cursive;
+    font-style: italic;
+    font-size: 25px;
+    color: rgb(129, 103, 62);
+}
+.card-body p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:15px ;
+    font-style: normal;
+    color: rgb(58, 41, 18);
+}
+
+.card-body h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+    color: rgb(41, 31, 5);
+}
+
+.modal-button{
+    background-color: rgb(138, 115, 115);
+    border-color: rgb(138, 115, 115);
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    padding-right: 76px;
+    padding-left: 76px;
+    font-family: 'Times New Roman', Times, serif;
+}

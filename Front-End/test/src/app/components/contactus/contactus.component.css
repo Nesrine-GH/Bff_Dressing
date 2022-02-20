@@ -1,0 +1,163 @@
+.wrapper {
+    height: 100vh;
+    background: rgb(83, 80, 80);
+    background: url("https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?cs=srgb&dl=pexels-artem-beliaikin-994523.jpg&fm=jpg");
+    background-size: cover;
+    width: 100%
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(95, 91, 91, 0.8)
+}
+
+.contact-us {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.contact-us h3{
+    font-family: cursive;
+    color:rgb(0, 0, 0) ;
+    font-size: 40px;
+}
+.contact-us p {
+    color: rgb(255, 255, 255);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.address {
+    margin-top: 14px ;
+    margin-left: 5px
+}
+.address p{
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+}
+.address span {
+    color: #5c0b75;
+    font-size: 20px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.icons {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.icons i {
+    font-size: 20px
+}
+
+
+
+.inputs input {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #eee
+}
+
+.inputs input:focus {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #7B1FA2;
+    box-shadow: none
+}
+
+.inputs textarea {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #eee;
+    width: 100%;
+    resize: none
+}
+
+.inputs textarea:focus {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #7B1FA2;
+    box-shadow: none;
+    resize: none
+}
+
+.form-control {
+    padding: .375rem .25rem
+}
+
+
+.modal-button {
+    background-color: rgb(138, 115, 115);
+    border-color: rgb(138, 115, 115);
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    padding-right: 76px;
+    padding-left: 76px;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+@media screen and (max-width:1200px) {
+    .card {
+        width: 90vw
+    }}
+    @media  (max-width:1000px) {
+.forms {
+    padding: 40px;
+
+}
+}
+
+.card-img {
+    padding: 20px 0;
+    width: 40%
+}
+
+
+
+.card-img img {
+    opacity: 0.7;
+    /* width: 250px;
+    height: 150px; */
+}
+
+.card-title {
+    margin-bottom: unset
+}
+
+.card-title p {
+    color: rgb(29, 226, 226);
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: unset
+}
+
+.card-text p {
+    color: rgb(73, 71, 71);
+    font-size: 20px;
+    text-align: center;
+    padding: 3vh 0;
+    font-weight: lighter;
+    
+}
+
+.btn {
+    /* width: 100%; */
+    background-color: rgb(141, 105, 131);
+    border-color: rgb(141, 105, 131);
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

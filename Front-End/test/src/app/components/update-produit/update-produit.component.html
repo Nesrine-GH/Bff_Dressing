@@ -1,0 +1,42 @@
+<div class="container mt-2">
+    <div>
+        <h2 class="text text-center text-danger"> Modifier un
+            Produit</h2>
+    </div>
+    <form (ngSubmit)="updateproduct(p)" #p="ngForm" *ngIf="product">
+        <div class="col-sm-2 col-md-2 col-lg-2 mt-4">
+            <label>ID Produit</label>
+            <input [(ngModel)]="product.id" name="id" type="text" class="form-control" id="id"
+                placeholder="Enter ID Produit">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Produit</label>
+            <input [(ngModel)]="product.nom" name="nom" type="text" class="form-control" id="nom"
+                placeholder="Enter Nom Produit">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Descprition Produit</label>
+            <input [(ngModel)]="product.descprition" name="descprition" type="text" class="form-control"
+                id="descprition" placeholder="Enter Descprition Produit">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Taille</label>
+            <input [(ngModel)]="product.taille" name="taille" type="text" class="form-control" id="taille"
+                placeholder="Enter Taille Produit">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix</label>
+            <input [(ngModel)]="product.prix" name="prix" type="text" class="form-control" id="prix"
+                placeholder="Enter Prix Produit">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Nombre de Stock</label>
+            <input [(ngModel)]="product.nbrstock" name="nbrstock" type="text" class="form-control" id="nbrstock"
+                placeholder="Enter Nombre de Stock Produit">
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn
+    btn-success">Modifier</button>
+        </div>
+    </form>
+</div>

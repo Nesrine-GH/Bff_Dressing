@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Categorie</th>
+                    <th>Taille</th>
+                    <th>Prix</th>
+                    <th>Nombre de stock</th>
+                </tr>
+                <tbody *ngFor="let p of products._embedded.products">
+                    <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.nom}}</td>
+                        <td>{{p.categorie}}</td>
+                        <td>{{p.taille}}</td>
+                        <td>{{p.prix}}</td>
+                        <td>{{p.nbrstock}}</td>
+
+                        <td><a class="btn btn-danger" (click)="deleteProduct(p)"><i class="far fa-trash-alt"></i></a></td>
+                        <!-- <td><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Modifier</a></td> -->
+                        <td><a class="btn btn-success" routerLink="/updateProduit/{{p.id}}"><i class="far fa-edit"></i></a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Product Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container mt-2">
+                                <div>
+                                    <h2 class="text text-center text-danger"> Modifier un Produit</h2>
+                                </div>
+ -->
+            <!-- <form (ngSubmit)="updateproducts(p)" #p="ngForm">
+                                   <form>
+                                    <div >
+                                        <label>ID Produit</label>
+                                        <input ngModel name="id" type="text" class="form-control" id="id"
+                                            placeholder="Enter ID Produit">
+                                    </div>
+                                    <div >
+                                        <label>Nom Produit</label>
+                                        <input ngModel name="nom" type="text" class="form-control" id="nom"
+                                            placeholder="Enter Nom Produit">
+                                    </div>
+                                    <div >
+                                        <label>Categorie Produit</label>
+                                        <input ngModel name="categorie" type="text" class="form-control" id="categorie"
+                                            placeholder="Enter Categorie Produit">
+                                    </div>
+
+
+                                    <div >
+                                        <label>Taille</label>
+                                        <input ngModel name="taille" type="text" class="form-control" id="taille"
+                                            placeholder="Enter Taille Produit">
+                                    </div>
+
+                                    <div >
+                                        <label>Prix</label>
+                                        <input ngModel name="prix" type="text" class="form-control" id="prix"
+                                            placeholder="Enter Prix Produit">
+                                    </div>
+                                    <div >
+                                        <label>Nombre de Stock</label>
+                                        <input ngModel name="nbrstock" type="text" class="form-control" id="nbrstock"
+                                            placeholder="Enter Nombre de Stock Produit">
+                                    </div>
+                                </form> -->
+            <!-- </div>
+                        </div> -->
+            <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+
+            <!-- </div> -->
+            <!-- </div>
+                </div>
+            </div> -->
+
+
+
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

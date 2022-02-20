@@ -1,0 +1,179 @@
+<header>
+
+    <div class="p-5 text-center bg-image" style="
+  background-image: url('https://www.hotelbdesign.fr/wp-content/uploads/2018/12/saint-valentin-2018.jpg');
+  height: 500px;
+">
+        <div class="mask" style="background-color: rgba(110, 99, 99, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">Notre Top 100</h1>
+                    <h4 class="mb-3">❤❤ Notre Sélection de Saint Valentin ❤❤</h4>
+                    <a class="btn btn-outline-light btn-lg" href="#!" role="button">Découvrez Maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="mt-5">
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <strong class="text-dark mr-2">Catégories:</strong>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">All</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vêtements</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Accessoires</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sacs et Chaussures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Beauté</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+
+                    <!-- Search form -->
+                    <form class="d-flex input-group w-auto" (ngSubmit)="getprixBetween(b.value)" #b="ngForm"
+                        class="mt-4 mb-4">
+                        <div class="row g-3 align-items-center">
+
+                            <div class="col-auto">
+                                <input name="min" ngModel type="number" class="form-control"
+                                    placeholder="Prix Minimal!">
+                            </div>
+
+                            <div class="col-auto">
+                                <input name="max" ngModel type="number" class="form-control"
+                                    placeholder="Prix Maximal!">
+                            </div>
+                            <div>
+                                <button class="btn btn-warning " type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <section class="text-center mb-4">
+
+            <div class="row">
+
+                <div class="col-lg-4  mb-4" *ngFor="let product of products._embedded.products">
+                    <div class="card">
+                        <div class=" image " data-bs-ripple-color="light">
+                            <img style=" height :300px;" [src]="product.photo" class="img-fluid w-300" />
+                            <a href="#!">
+                                <!-- <div class="mask" style="background-color: rgba(128, 107, 107, 0.15);"></div> -->
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.nom}}</h5>
+                            <p class="card-text">
+                                {{product.descprition}}
+                            </p>
+                            <h4 class="text">Taille: {{product.taille}}</h4>
+                            <h4 class="text">Prix: {{product.prix}}€</h4>
+                            <h4 class="text">Quantité:
+                                {{product.nbrstock}}</h4>
+
+                            <button (click)="addtoBasket(product)" class="modal-button" data-bs-toggle="modal"
+                                data-bs-target="#myModal">✚ <i class="fas fa-shopping-basket"></i></button>
+
+
+
+
+
+
+
+
+
+
+                            <!-- 
+
+                                                      <button (click)="addtoBasket(product)"> Acheter</button> -->
+
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navbar -->
+    </div>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<main class="container">
+    <h1 class="text-center text-success "> OUR PRODUCTS </h1>
+
+    <section class="row">
+        <article class="col-4 mt-4  " *ngFor="let product of products._embedded.products">
+            <img style=" height :400px;" [src]="product.photo" class="card-img-top w-200 " alt="...">
+            <div class="card-body">
+                <h2 class="card-title text-center text-danger"> {{product.nom}} </h2>
+
+                <p class="card-text text-center ">{{product.descprition}}</p>
+                <h4 class="card-title text-center text-danger"> {{product.taille}} </h4>
+                <h5 class="card-title text-center text-danger"> {{product.prix}} € </h5>
+                <p class="card-text text-center text-success ">Nombre de stock:
+                    {{product.nbrstock}}
+                </p>
+
+                <button (click)="addtoBasket(product)"> ADD TO BASKET</button>
+                <p>{{ message }}</p>
+
+            </div>
+        </article>
+    </section>
+</main> -->
+
+<router-outlet></router-outlet>

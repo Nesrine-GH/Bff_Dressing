@@ -1,0 +1,157 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="">
+      <img src="../assets/BffDressing_logo.png" height="90" width="200" loading="lazy" />
+    </a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" aria-current="page" routerLink=""> <i class="fas fa-home"></i> Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="products" id="navbardrop"
+            data-bs-toggle="dropdown">Products</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" *ngIf="authentificationService.isAdmin()"
+                routerLink="ajouterproduct">Ajouter</a></li>
+            <li><a class="dropdown-item" *ngIf="authentificationService.isAdmin()" routerLink="modifierproduct">Modifier
+                ou Supprimer</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contactus">Contact Us</a>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav d-flex flex-row">
+        <!-- Icons -->
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" routerLink="basket">
+
+            <span><i class="fas fa-shopping-cart"></i></span>
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="https://facebook.com/bff_dressing">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="https://instagram.com/bff_dressing?utm_medium=copy_link">
+            <i class="fab fa-instagram-square"></i>
+          </a>
+        </li>
+        <!-- Icon dropdown -->
+        <li> <a class="nav-link me-3 me-lg-0 text-danger">{{authentificationService.loggedUser}}</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="product" id="navbardrop" data-bs-toggle="dropdown"><i
+              class="fas fa-user"></i></a>
+          <div class="dropdown-menu">
+            <a *ngIf="!authentificationService.isloggedIn" class="dropdown-item" routerLink="login">login</a>
+            <a *ngIf="authentificationService.isloggedIn" class="dropdown-item" (click)="onLogout()">logout</a>
+            <a class="dropdown-item" href="#">Profile</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<footer class="text-center text-white" style="background-color: #caced1;">
+  Grid container -->
+<!-- <div class="container p-4"> -->
+<!-- Section: Images -->
+<!-- <section class="">
+      <div class="row">
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div mdbRipple rippleColor="light" class="bg-image hover-overlay ripple shadow-1-strong rounded">
+            <img src="https://mdbootstrap.com/img/new/fluid/city/113.webp" class="w-100" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div mdbRipple rippleColor="light" class="bg-image hover-overlay ripple shadow-1-strong rounded">
+            <img src="https://mdbootstrap.com/img/new/fluid/city/111.webp" class="w-100" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div mdbRipple rippleColor="light" class="bg-image hover-overlay ripple shadow-1-strong rounded">
+            <img src="https://mdbootstrap.com/img/new/fluid/city/112.webp" class="w-100" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div mdbRipple rippleColor="light" class="bg-image hover-overlay ripple shadow-1-strong rounded">
+            <img src="https://mdbootstrap.com/img/new/fluid/city/114.webp" class="w-100" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div mdbRipple rippleColor="light" class="bg-image hover-overlay ripple shadow-1-strong rounded">
+            <img src="https://mdbootstrap.com/img/new/fluid/city/115.webp" class="w-100" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div mdbRipple rippleColor="light" class="bg-image hover-overlay ripple shadow-1-strong rounded">
+            <img src="https://mdbootstrap.com/img/new/fluid/city/116.webp" class="w-100" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+<!-- Section: Images -->
+<!-- </div> -->
+<!-- Grid container -->
+
+<!-- Copyright -->
+<!-- <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div> -->
+<!-- Copyright -->
+<!-- </footer> -->
+
+
+
+
+<router-outlet> </router-outlet>
